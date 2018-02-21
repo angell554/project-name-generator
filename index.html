@@ -4,16 +4,14 @@
 
 <title>Project Name Generator</title>
 
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <style type="text/css">
 body{font-family: 'Montserrat', sans-serif; font-size: 14px; background-color: #ccd5ce;}
 
-.container{width:300px;margin: 0 auto;}
 
-.logo{text-align: center; margin: 40px auto;}
-.logo img{text-align:center; width:250px;}
-
-.title{text-align: center; }
+h1{margin: 20px; font-weight:bold;}
 
 #projectname{
 	background-color: #1d1d1b;
@@ -26,12 +24,21 @@ body{font-family: 'Montserrat', sans-serif; font-size: 14px; background-color: #
 	line-height: 200%;
 }
 
+.center{text-align: center}
+
 .small{font-size:12px; font-style: italic;}
 
-p{text-align: center}
 
-a{text-decoration: none}
-a:hover{text-decoration: underline;}
+.btn-orange{
+	background-color: #f58a00;
+	border-color: #f56700;
+	color: #fff;
+}
+.btn-orange:hover {
+    color: #fff;
+    background-color: #d67612;
+    border-color: #c25c09;
+}
 
 .grey{color: #1d1d1b;}
 .orange{color: #f58a00;}
@@ -43,20 +50,43 @@ a:hover{text-decoration: underline;}
 <body onload="printnames();">
 
 <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1 class="text-center">Project Name Generator</h1>
+			<p class="text-center">
+				<button class="btn btn-lg btn-orange" onclick="window.location.reload(true);">REFRESH PAGE</button>
+			</p>
+		</div>
+	</div>
 
-<h1 class="title">Project Name Generator</h1>
+	<div class="row justify-content-center">
+		<div class="col-4">
+			<div id="projectname" class="pink"></div>
+		</div>
+	</div>
 
-<p><a href="#" class="orange" onclick="window.location.reload(true);">REFRESH PAGE</a></p>
-<div id="projectname" class="pink"></div>
+	<div class="row justify-content-center">
 
-<p><span class="small">Generator Seeds</span><br/>
-[Plant] [Amphibian/Reptile]</p>
+		<div class="col-4">
+			<hr>
+			<p class="text-center">
+				<span class="small">Generator Seeds</span>
+				<br/>
+				[Plant] [Amphibian/Reptile]
+			</p>
+		</div>
+	</div>
+
+
+
+
 </div>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script text="text/javascript">
 	var colours = ["Green", "Crimson", "Red", "Blue", "Purple", "Black", "White", "Mauve", "Green", "Orange"];
